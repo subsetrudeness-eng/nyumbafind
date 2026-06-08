@@ -1,0 +1,30 @@
+# ============================================================
+#  NyumbaFind — .gitignore
+#  Everything listed here is NEVER uploaded to GitHub
+# ============================================================
+
+# ⚠️  SECRET FILES — NEVER PUSH THESE
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Node modules (too big, reinstall with npm install)
+node_modules/
+
+# Build output
+build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
