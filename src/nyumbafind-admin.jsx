@@ -598,7 +598,7 @@ export default function AdminApp() {
 
   // ── Login ──
   const login = () => {
-    if (email==="admin@nyumbafind.mw" && pass==="admin123") {
+    if (email==="admin@nyumbafind.mw" && pass==="Nyumba@2025!") {
       setLoggedIn(true); setLoginErr("");
     } else {
       setLoginErr("Wrong email or password.");
