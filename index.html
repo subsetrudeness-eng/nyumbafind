@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#15803d" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NyumbaFind" />
+    <meta name="application-name" content="NyumbaFind" />
+    <meta name="msapplication-TileColor" content="#052e16" />
+
+    <!-- SEO -->
+    <meta name="description" content="NyumbaFind — Malawi's most trusted house rental platform. Chief-verified listings. Deposit protected. Zero scams. Find homes in Lilongwe, Blantyre, Mzuzu and Zomba." />
+    <meta name="keywords" content="house rental Malawi, Lilongwe houses, Blantyre rental, NyumbaFind, Malawi property" />
+    <meta name="author" content="NyumbaFind" />
+
+    <!-- Open Graph (for Facebook sharing) -->
+    <meta property="og:title" content="NyumbaFind 🏠 — Find Your Home in Malawi" />
+    <meta property="og:description" content="Chief-verified listings. Deposit protected. Zero scams. Find your perfect home in Malawi." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nyumbafind.com" />
+    <meta property="og:image" content="/nyumbafind-artwork.png" />
+
+    <!-- WhatsApp sharing -->
+    <meta property="og:site_name" content="NyumbaFind" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Apple touch icons -->
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/icons/icon-192.png" />
+
+    <title>NyumbaFind 🏠 — Find Your Home in Malawi</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run NyumbaFind.</noscript>
+    <div id="root"></div>
+
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then(function(reg) {
+              console.log('NyumbaFind SW registered:', reg.scope);
+            })
+            .catch(function(err) {
+              console.log('SW registration failed:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
